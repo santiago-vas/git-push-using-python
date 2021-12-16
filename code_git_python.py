@@ -24,3 +24,12 @@ origin = repo.remote(name="origin")
 origin.push()
 # origin.pull()
 
+
+# CORRER URL POR METODO POST()
+
+
+import requests
+API_ENDPOINT = "https://locationworld.cloud.looker.com/webhooks/projects/lookml_customers/deploy"
+data = {'api_option':'deploy',
+        'api_paste_format':'python'}
+r = requests.post(url = API_ENDPOINT, data = data)
